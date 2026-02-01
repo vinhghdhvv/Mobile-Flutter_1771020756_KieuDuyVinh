@@ -12,74 +12,74 @@
 MOBILE_FLUTTER_1771020756_KIEU_DUY_VINH
 │
 ├── Backend/
-│ └── PCM.Backend/
-│ ├── Controllers/ # Các API Controller
-│ │ ├── AuthController.cs # Đăng nhập / đăng ký
-│ │ ├── ClubsController.cs # Quản lý CLB
-│ │ ├── CourtsController.cs # Quản lý sân bóng
-│ │ └── MembersController.cs # Quản lý hội viên
-│ │
-│ ├── Data/
-│ │ └── ApplicationDbContext.cs # DbContext (Entity Framework)
-│ │
-│ ├── DTOs/ # Data Transfer Objects
-│ │ ├── LoginDto.cs
-│ │ └── RegisterDto.cs
-│ │
-│ ├── Helpers/ # Class hỗ trợ (JWT, Utils…)
-│ ├── Hubs/ # SignalR (nếu có)
-│ ├── Migrations/ # Migration database
-│ │
-│ ├── Models/ # Entity Model
-│ │ ├── ApplicationUser.cs
-│ │ ├── Booking.cs
-│ │ ├── Club.cs
-│ │ ├── Court.cs
-│ │ └── Member.cs
-│ │
-│ ├── Services/ # Business logic
-│ │
-│ ├── appsettings.json
-│ ├── appsettings.Development.json
-│ └── PCM.Backend.csproj
+│   └── PCM.Backend/
+│       ├── Controllers/                 # Các API Controller
+│       │   ├── AuthController.cs         # Đăng nhập / đăng ký
+│       │   ├── ClubsController.cs        # Quản lý CLB
+│       │   ├── CourtsController.cs       # Quản lý sân bóng
+│       │   └── MembersController.cs      # Quản lý hội viên
+│       │
+│       ├── Data/
+│       │   └── ApplicationDbContext.cs   # DbContext (Entity Framework)
+│       │
+│       ├── DTOs/                         # Data Transfer Objects
+│       │   ├── LoginDto.cs
+│       │   └── RegisterDto.cs
+│       │
+│       ├── Helpers/                      # Class hỗ trợ (JWT, Utils…)
+│       ├── Hubs/                         # SignalR (nếu có)
+│       ├── Migrations/                  # Migration database
+│       │
+│       ├── Models/                       # Entity Model
+│       │   ├── ApplicationUser.cs
+│       │   ├── Booking.cs
+│       │   ├── Club.cs
+│       │   ├── Court.cs
+│       │   └── Member.cs
+│       │
+│       ├── Services/                     # Business logic
+│       │
+│       ├── appsettings.json
+│       ├── appsettings.Development.json
+│       └── PCM.Backend.csproj
 │
 ├── pcm_mobile/
-│ ├── lib/
-│ │ ├── data/ # Dữ liệu tạm / mock data
-│ │ │
-│ │ ├── models/ # Model dữ liệu
-│ │ │ ├── club.dart # Model CLB
-│ │ │ ├── court.dart # Model sân bóng
-│ │ │ ├── login_request.dart # Model đăng nhập
-│ │ │ ├── member.dart # Model hội viên
-│ │ │ ├── tournament.dart # Model giải đấu
-│ │ │ └── transaction_model.dart # Model giao dịch tài chính
-│ │ │
-│ │ ├── pages/ # Các page chính (layout lớn)
-│ │ │ ├── dashboard_home.dart
-│ │ │ ├── dashboard_page.dart
-│ │ │ ├── home_page.dart
-│ │ │ ├── login_page.dart
-│ │ │ ├── member_page.dart
-│ │ │ ├── tournament_page.dart
-│ │ │ ├── court_page.dart
-│ │ │ └── finance_page.dart
-│ │ │
-│ │ ├── screens/ # Màn hình chi tiết / dialog
-│ │ │ ├── login_screen.dart
-│ │ │ ├── home_screen.dart
-│ │ │ ├── member_list_screen.dart
-│ │ │ ├── add_member_screen.dart
-│ │ │ ├── add_tournament_screen.dart
-│ │ │ ├── add_transaction_dialog.dart
-│ │ │ └── transaction_table.dart
-│ │ │
-│ │ ├── services/
-│ │ │ └── api_service.dart # Gọi API backend
-│ │ │
-│ │ └── main.dart # Entry point của Flutter app
-│ │
-│ └── pubspec.yaml
+│   ├── lib/
+│   │   ├── data/                         # Dữ liệu tạm / mock data
+│   │   │
+│   │   ├── models/                       # Model dữ liệu
+│   │   │   ├── club.dart                 # Model CLB
+│   │   │   ├── court.dart                # Model sân bóng
+│   │   │   ├── login_request.dart        # Model đăng nhập
+│   │   │   ├── member.dart               # Model hội viên
+│   │   │   ├── tournament.dart           # Model giải đấu
+│   │   │   └── transaction_model.dart    # Model giao dịch tài chính
+│   │   │
+│   │   ├── pages/                        # Các page chính (layout lớn)
+│   │   │   ├── dashboard_home.dart
+│   │   │   ├── dashboard_page.dart
+│   │   │   ├── home_page.dart
+│   │   │   ├── login_page.dart
+│   │   │   ├── member_page.dart
+│   │   │   ├── tournament_page.dart
+│   │   │   ├── court_page.dart
+│   │   │   └── finance_page.dart
+│   │   │
+│   │   ├── screens/                      # Màn hình chi tiết / dialog
+│   │   │   ├── login_screen.dart
+│   │   │   ├── home_screen.dart
+│   │   │   ├── member_list_screen.dart
+│   │   │   ├── add_member_screen.dart
+│   │   │   ├── add_tournament_screen.dart
+│   │   │   ├── add_transaction_dialog.dart
+│   │   │   └── transaction_table.dart
+│   │   │
+│   │   ├── services/
+│   │   │   └── api_service.dart           # Gọi API backend
+│   │   │
+│   │   └── main.dart                     # Entry point của Flutter app
+│   │
+│   └── pubspec.yaml
 
 ## 3. Công nghệ sử dụng
 
