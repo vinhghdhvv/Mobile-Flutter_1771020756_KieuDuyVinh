@@ -115,7 +115,7 @@ dotnet run
 
 👉 Sau khi chạy thành công:
 
-* Swagger: `https://localhost:xxxx/swagger`
+* Swagger: `https://localhost:5081/swagger`
 * API test ví dụ:
 
   * `GET /api/Clubs`
@@ -134,7 +134,7 @@ dotnet run
 ### Ví dụ 2: Test trên trình duyệt / Postman
 
 ```
-http://localhost:xxxx/api/Members
+http://localhost:5081/api/Members
 ```
 
 * Trả về dữ liệu JSON → Backend **hoạt động bình thường** ✅
