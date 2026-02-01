@@ -166,14 +166,14 @@ flutter run
 
 ## 8. Link Sản phẩm Online / Deploy
 
-* Backend: Swagger / API Endpoint (Localhost)
-* Mobile: Chạy trực tiếp trên Emulator / Máy thật
+* Backend: Swagger:http://localhost:5081/swagger
+* Mobile: Web:https://drive.google.com/file/d/136DCsx4HhkkgJce89QJYwd1NhAM6H_fN/view?usp=sharing
 
 ---
 
 ## 9. Link Video Demo
 
-👉 *(YouTube – Unlisted hoặc Google Drive – View)*
+👉 https://youtu.be/OAgfrg4b7w4
 
 ### Nội dung video demo gồm:
 
