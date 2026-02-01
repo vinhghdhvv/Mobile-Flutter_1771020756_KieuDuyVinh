@@ -9,6 +9,8 @@
 ---
 
 ## 2. Cấu trúc Repository
+
+```text
 MOBILE_FLUTTER_1771020756_KIEU_DUY_VINH
 │
 ├── Backend/
@@ -80,7 +82,7 @@ MOBILE_FLUTTER_1771020756_KIEU_DUY_VINH
 │   │   └── main.dart                     # Entry point của Flutter app
 │   │
 │   └── pubspec.yaml
-
+```text
 
 ## 3. Công nghệ sử dụng
 
