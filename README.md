@@ -1,129 +1,171 @@
 # CLB Pickleball Vợt Thủ Phố Núi
+Ứng dụng CLB Pickleball Vợt Thủ Phố Núi là ứng dụng Flutter dùng để quản lý câu lạc bộ PickleBall, bao gồm: hội viên, sân bóng, giải đấu, tài chính và dashboard tổng quan. Dự án được xây dựng theo mô hình rõ ràng (models – pages – screens – services) để dễ mở rộng và bảo trì.
+## 1. Thông tin sinh viên
 
-Ứng dụng **CLB Pickleball Vợt Thủ Phố Núi** là ứng dụng Flutter dùng để quản lý câu lạc bộ PickleBall, bao gồm: hội viên, sân bóng, giải đấu, tài chính và dashboard tổng quan. Dự án được xây dựng theo mô hình rõ ràng (models – pages – screens – services) để dễ mở rộng và bảo trì.
-
----
-
-## 1. Công nghệ sử dụng
-
-* **Flutter** (UI)
-* **Dart** (ngôn ngữ lập trình)
-* **REST API** (kết nối backend)
-* **Visual Studio Code** / **Android Studio**
+* **Họ và tên**: Kiều Duy Vinh
+* **Mã sinh viên**: 1771020756
+* **Lớp / Môn học**: 17.08 – Mobile App
 
 ---
 
-## 2. Cấu trúc thư mục
+## 2. Cấu trúc Repository
 
-```text
-pcm_mobile/
+```
+MOBILE_FLUTTER_1771020756_KIEU_DUY_VINH
 │
-├── lib/
-│   ├── data/
-│   │   └── (chứa dữ liệu tạm / mock data nếu có)
-│   │
-│   ├── models/
-│   │   ├── club.dart                # Model CLB
-│   │   ├── court.dart               # Model sân bóng
-│   │   ├── login_request.dart       # Model đăng nhập
-│   │   ├── member.dart              # Model hội viên
-│   │   ├── tournament.dart          # Model giải đấu
-│   │   └── transaction_model.dart   # Model giao dịch tài chính
-│   │
-│   ├── pages/                       # Các page chính (layout lớn)
-│   │   ├── dashboard_home.dart
-│   │   ├── dashboard_page.dart
-│   │   ├── home_page.dart
-│   │   ├── login_page.dart
-│   │   ├── member_page.dart
-│   │   ├── tournament_page.dart
-│   │   ├── court_page.dart
-│   │   └── finance_page.dart
-│   │
-│   ├── screens/                     # Các màn hình / dialog chi tiết
-│   │   ├── login_screen.dart
-│   │   ├── home_screen.dart
-│   │   ├── member_list_screen.dart
-│   │   ├── add_member_screen.dart
-│   │   ├── add_tournament_screen.dart
-│   │   ├── add_transaction_dialog.dart
-│   │   └── transaction_table.dart
-│   │
-│   ├── services/
-│   │   └── api_service.dart          # Gọi API backend
-│   │
-│   └── main.dart                    # Entry point của app
+├── Backend
+│   └── PCM.Backend
+│       ├── Controllers
+│       │   ├── AuthController.cs
+│       │   ├── ClubsController.cs
+│       │   ├── CourtsController.cs
+│       │   └── MembersController.cs
+│       │
+│       ├── Data
+│       │   └── ApplicationDbContext.cs
+│       │
+│       ├── DTOs
+│       │   ├── LoginDto.cs
+│       │   └── RegisterDto.cs
+│       │
+│       ├── Helpers
+│       ├── Hubs
+│       ├── Migrations
+│       │
+│       ├── Models
+│       │   ├── ApplicationUser.cs
+│       │   ├── Booking.cs
+│       │   ├── Club.cs
+│       │   ├── Court.cs
+│       │   └── Member.cs
+│       │
+│       ├── Services
+│       ├── appsettings.json
+│       ├── appsettings.Development.json
+│       └── PCM.Backend.csproj
 │
-└── pubspec.yaml
+├── pcm_mobile
+│   ├── lib
+│   ├── assets
+│   └── pubspec.yaml
+│
+└── README.md
 ```
 
 ---
 
-## 3. Luồng chức năng chính
+## 3. Công nghệ sử dụng
 
-### 3.1 Đăng nhập
+### 🔹 Backend
 
-* Người dùng nhập tài khoản và mật khẩu
-* `login_screen.dart` → gọi `ApiService.login()`
-* Đăng nhập thành công sẽ chuyển sang Dashboard
+* ASP.NET Core Web API
+* Entity Framework Core
+* SQL Server
+* Swagger (test API)
 
-### 3.2 Dashboard
+### 🔹 Mobile App
 
-* Hiển thị tổng quan: số hội viên, số sân, số giải đấu, tài chính
-* Điều hướng sang các chức năng bên trái (sidebar)
-
-### 3.3 Quản lý giải đấu
-
-* Xem danh sách giải đấu (`tournament_page.dart`)
-* Nhấn **Tạo giải** → mở `add_tournament_screen.dart`
-* Sau khi lưu thành công:
-
-  * Gọi API tạo giải
-  * Cập nhật lại danh sách giải đấu
-
-### 3.4 Quản lý hội viên
-
-* Xem danh sách hội viên
-* Thêm hội viên mới
-* Hiển thị chi tiết hội viên
-
-### 3.5 Quản lý tài chính
-
-* Ghi nhận giao dịch thu / chi
-* Hiển thị bảng giao dịch
+* Flutter
+* Dart
+* REST API
 
 ---
 
-## 4. Quy ước code
-
-* **Model**: chỉ chứa dữ liệu + `fromJson()` / `toJson()`
-* **Service**: chỉ xử lý gọi API
-* **Page**: layout chính (Scaffold, AppBar, Drawer)
-* **Screen**: màn hình con, form, dialog
-
----
-
-## 5. Cách chạy project
+## 4. Hướng dẫn chạy Backend (từ Terminal mới mở)
 
 ```bash
+cd D:\HOC TAP\MOBILE_FLUTTER_1771020756_KIEU DUY VINH
+cd Backend
+cd PCM.Backend
+
+dotnet restore
+dotnet ef database update
+dotnet run
+```
+
+👉 Sau khi chạy thành công:
+
+* Swagger: `https://localhost:xxxx/swagger`
+* API test ví dụ:
+
+  * `GET /api/Clubs`
+  * `GET /api/Courts`
+
+---
+
+## 5. Ví dụ chứng minh Backend đang hoạt động
+
+### Ví dụ 1: Test Swagger
+
+* Mở trình duyệt → vào link Swagger
+* Gọi API `GET /api/Clubs`
+* Nếu trả về danh sách JSON → Backend **đang sống** ✅
+
+### Ví dụ 2: Test trên trình duyệt / Postman
+
+```
+http://localhost:xxxx/api/Members
+```
+
+* Trả về dữ liệu JSON → Backend **hoạt động bình thường** ✅
+
+---
+
+## 6. Hướng dẫn chạy Mobile App (Flutter)
+
+```bash
+cd D:\HOC TAP\MOBILE_FLUTTER_1771020756_KIEU DUY VINH
+cd pcm_mobile
+
 flutter pub get
 flutter run
 ```
 
-> Lưu ý: cần cấu hình đúng `baseUrl` trong `api_service.dart`
+📌 Lưu ý:
+
+* Backend phải chạy trước
+* Kiểm tra lại `baseUrl` API trong Flutter
 
 ---
 
-## 6. Hướng phát triển thêm
+## 7. Link Repository (Source Code)
 
-* Phân quyền (Admin / Member)
-* Thống kê biểu đồ (Chart)
-* Upload ảnh giải đấu
-* Push notification
+👉 *(Dán link GitHub repository tại đây)*
 
 ---
 
-## 7. Tác giả
+## 8. Link Sản phẩm Online / Deploy
 
-* Dự án học tập Flutter
-* CLB Pickleball Vợt Thủ Phố Núi
+* Backend: Swagger / API Endpoint (Localhost)
+* Mobile: Chạy trực tiếp trên Emulator / Máy thật
+
+---
+
+## 9. Link Video Demo
+
+👉 *(YouTube – Unlisted hoặc Google Drive – View)*
+
+### Nội dung video demo gồm:
+
+1. Mở Backend và chạy `dotnet run`
+2. Mở Swagger gọi API
+3. Chạy Flutter App
+4. Thao tác đăng nhập / xem dữ liệu
+
+---
+
+## 10. Tài khoản Test
+
+* **Username**: admin@gmail.com
+* **Password**: 123456
+
+---
+
+## 11. Ghi chú
+
+* Video quay trên môi trường thật (Laptop)
+* Có đầy đủ source code + README
+* Đảm bảo giảng viên có thể chạy lại dự án dễ dàng
+
+---
+
